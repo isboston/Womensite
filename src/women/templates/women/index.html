@@ -3,11 +3,21 @@
 {% block content %}
 <h2>{{ title }}</h2>
 
+
+<ul>
+    <li><a href="/">Главная</a></li>
+    <li><a href="about">История бренда</a></li>
+    <li>Mens</li>
+    <li>Womens</li>
+    <li>Contact us</li>
+    <li>My account</li>
+</ul>
 <ul>
     {% for p in posts %}
     <li>
         <h2>{{ p.title }}</h2>
         <p>{{ p.content }}</p>
+        <p>{{ p.category }}</p>
         <hr>
     </li>
     {% endfor %}

@@ -5,7 +5,12 @@ from .models import *
 # Create your views here.
 def index(request):
     posts = Women.objects.all()
-    return render(request, 'women/index.html', {'posts': posts, 'title': 'Home page'})
+    categories = Category.objects.all()
+    return render(request, 'women/index.html', {
+        'posts': posts,
+        'title': 'Home page',
+        'categories': categories
+    })
 
 
 def about(request):
