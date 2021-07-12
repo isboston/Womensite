@@ -30,7 +30,7 @@ def about(request):
 
 
 def addpage(request):
-    return HttpResponse("Добавление статьи")
+    return render(request, 'women/addpage.html')
 
 
 def contact(request):
@@ -65,3 +65,7 @@ def show_category(request, cat_id):
     }
 
     return render(request, 'women/index.html', context=context)
+
+
+def random_page(request):
+    return render(request, 'women/random.html')
